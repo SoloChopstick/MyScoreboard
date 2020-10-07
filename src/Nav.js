@@ -12,7 +12,7 @@ const Nav = () => {
                 <Link style={navStyle} to="/about">
                     <li>About</li>
                 </Link>
-                <Link style={navStyle} to="/https://github.com/SoloChopstick/MyScoreboard">
+                <Link style={navStyle} to="/source">
                     <li>Source</li>
                 </Link>
             </ul>

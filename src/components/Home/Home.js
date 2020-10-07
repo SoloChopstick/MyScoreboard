@@ -25,6 +25,7 @@ const Home = () => {
     ]
 
     const buttons = sports.map(sport => (<Button key={sport.name} {...sport} />))
+    
     return (
         <div>
             <h1>MY SCOREBOARD</h1>
@@ -37,11 +38,9 @@ const Home = () => {
                     <img src={ES6Logo} alt="ES6"></img>
                 </div>
             </div>
-            <Router>
-                <div className="list">
-                    {buttons}
-                </div>
-            </Router>
+            <div className="list">
+                {buttons}
+            </div>
         </div>
     )
 }
