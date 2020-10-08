@@ -1,14 +1,22 @@
+//REACT IMPORTS
 import React from "react"
+
+//IMAGE IMPORTS
 import reactLogo from "../../images/logos/React.png"
 import ES6Logo from "../../images/logos/ES6.png"
 import NodeJsLogo from "../../images/logos/NodeJs.png"
-import Button from "../Button"
-import {BrowserRouter as Router} from "react-router-dom"
+
+//COMPONENT IMPORTS
+import NavButton from "../Nav/NavButton"
+
+//DATA IMPORTS
+import {sports} from "../../data/sports"
+
+//STYLE IMPORTS
 import './Home.css';
-import Nba from "../../Nba"
-//import sports from "../data/SportsPages.js"
 
 const Home = () => {
+    /*
     const sports = [
         {
             name: "NBA",
@@ -23,9 +31,10 @@ const Home = () => {
             sport: "football",
         }
     ]
+    */
 
-    const buttons = sports.map(sport => (<Button key={sport.name} {...sport} />))
-    
+    const buttons = sports.map(sport => (<NavButton key={sport.name} {...sport} />))
+
     return (
         <div>
             <h1>MY SCOREBOARD</h1>

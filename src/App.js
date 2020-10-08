@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import Home from "./components/Home/Home"
-import Nav from "./Nav"
+import Nav from "./components/Nav/Nav"
 import About from "./About"
 import Nba from "./Nba"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossOrigin="anonymous"
         />
+        <script src="https://kit.fontawesome.com/5af6939b2b.js" crossorigin="anonymous"></script>
       </header>
+      <Footer />
       {/*
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
