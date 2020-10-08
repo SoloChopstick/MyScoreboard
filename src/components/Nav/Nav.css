@@ -3,12 +3,12 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    background: #485696;
-    color: white;
+    background: #D3D3D3;
+    color: #5c677d;
   }
 
 .navStyle {
-    color: white;
+    color: #5c677d;
     font-weight: bold;
 }
   
@@ -16,6 +16,7 @@ nav {
     width: 50%;
     display: flex;
     justify-content: space-around;
-    align-items: right;
     list-style: None;
+    margin: 0 0 0 50vw;
+    text-align: right;
   }

@@ -30,7 +30,7 @@ const Home = () => {
                     <img src={ES6Logo} alt="ES6"></img>
                 </div>
             </div>
-            <div className="list">
+            <div className="home-links">
                 {buttons}
             </div>
         </div>

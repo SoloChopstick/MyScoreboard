@@ -3,13 +3,13 @@
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    background: #485696;
-    color: white;
+    background: #D3D3D3;
+    color: #5c677d;
     font-weight: bold;
   }
 
 .footerStyle {
-    color: white;
+    color: #5c677d;
     font-weight: bold;
 }
   
@@ -19,6 +19,4 @@
     justify-content: space-around;
     align-items: right;
     list-style: None;
-    text-decoration: none; 
-    background-color: none;
   }
