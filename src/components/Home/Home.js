@@ -16,27 +16,10 @@ import {sports} from "../../data/sports"
 import './Home.css';
 
 const Home = () => {
-    /*
-    const sports = [
-        {
-            name: "NBA",
-            sport: "basketball",
-        },
-        {
-            name: "NHL",
-            sport: "hockey",
-        },
-        {
-            name: "NFL",
-            sport: "football",
-        }
-    ]
-    */
-
     const buttons = sports.map(sport => (<NavButton key={sport.name} {...sport} />))
 
     return (
-        <div>
+        <div className="home">
             <h1>MY SCOREBOARD</h1>
             <h2>Real-time NBA scoreboard built with:</h2>
             <div className="row">

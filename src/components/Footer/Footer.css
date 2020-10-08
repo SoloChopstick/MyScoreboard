@@ -1,21 +1,24 @@
-nav {
+.footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
     background: #485696;
     color: white;
+    font-weight: bold;
   }
 
-.navStyle {
+.footerStyle {
     color: white;
     font-weight: bold;
 }
   
-.nav-links{
+.footer-links{
     width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: right;
     list-style: None;
+    text-decoration: none; 
+    background-color: none;
   }

@@ -25,7 +25,7 @@ const Nav = () => {
                 </Link>
                 <a 
                     className="navStyle" 
-                    href="https://github.com/SoloChopstick">Source
+                    href="https://github.com/SoloChopstick/MyScoreboard">Source
                 </a>
             </ul>
         </nav>
