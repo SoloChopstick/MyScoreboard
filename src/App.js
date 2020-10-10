@@ -1,11 +1,19 @@
+
+//REACT IMPORTS
 import React from 'react';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+
+//COMPONENT IMPORTS
 import Home from "./components/Home/Home"
 import Nav from "./components/Nav/Nav"
 import About from "./About"
-import Nba from "./Nba"
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import Games from "./components/Games/Games"
+import Players from "./components/Players/Players"
+import Teams from "./components/Teams/Teams"
 import Footer from "./components/Footer/Footer"
+
+//STYLE IMPORTS
+import './App.css';
 
 function App() {
   return (
@@ -15,7 +23,9 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/about" exact component={About}/>
-          <Route path="/nba" exact component={Nba}/>
+          <Route path="/games" exact component={Games}/>
+          <Route path="/players" exact component={Players}/>
+          <Route path="/teams" exact component={Teams}/>
         </Switch>
       <header>
         <link

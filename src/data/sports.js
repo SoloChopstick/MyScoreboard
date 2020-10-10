@@ -1,22 +1,11 @@
 export const sports = [
         {
-            name: "NBA",
-            sport: "basketball"
+            name: "Teams",
         },
         {
-            name: "NHL",
-            sport: "hokey"
+            name: "Players",
         },
         {
-            name: "NFL",
-            sport: "football"
+            name: "Games",
         },
-        {
-            name: "SC2",
-            sport: "Starcraft 2"
-        },
-        {
-            name: "LOL",
-            sport: "League of Legends"
-        }
     ]
