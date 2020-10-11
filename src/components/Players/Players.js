@@ -1,6 +1,7 @@
 import React from "react"
 import PlayerCard from "./PlayerCard"
 
+import "./Players.css"
 class Players extends React.Component {
     constructor() {
         super()
@@ -12,7 +13,7 @@ class Players extends React.Component {
     }
 
     componentDidMount() {
-        let url = "https://www.balldontlie.io/api/v1/players"
+        let url = "https://www.balldontlie.io/api/v1/players?search=lebron"
         fetch(url)
         .then(response => response.json())
         .then(response => {
@@ -37,14 +38,10 @@ class Players extends React.Component {
             <PlayerCard key={player.id} {...player}/>
         ))
 
-
-
         return (
             <div>
                 <h1> HELLO FROM PLAYERS </h1>
-                <ul>
-                    {playersDisplay}
-                </ul>
+                {playersDisplay}
             </div>
         )
     }
