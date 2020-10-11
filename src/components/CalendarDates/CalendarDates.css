@@ -1,18 +1,19 @@
-nav {
+.calendarDates {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    background: #D3D3D3;
+    background: white;
     color: #5c677d;
+    margin: 25px;
   }
 
-.navStyle {
+.calStyle {
     color: #5c677d;
     font-weight: bold;
 }
   
-.nav-links{
+.cal-links{
     width: 50%;
     display: flex;
     justify-content: space-around;

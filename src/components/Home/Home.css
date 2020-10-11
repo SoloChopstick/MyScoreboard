@@ -1,5 +1,5 @@
 .home {
-  height: 80vh;
+  height: 75vh;
 }
 
 .home-links {
@@ -20,13 +20,15 @@ img {
     object-fit: scale-down;
 }
 
+
 .container {
-  margin:1em;
-  height:205px;
+  text-align: center;
+  flex-direction: column;
   display:flex;
   align-items:center;
-  font-size:1.1em;
+  justify-content:center;
 }
+
 .text {
   letter-spacing:0;
   text-align:center;
@@ -36,4 +38,36 @@ img {
   background:grey;
   text-transform:capitalize;
   font-weight:lighter;
+}
+
+.scoreboard {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5% 0 -2.5%;
+  letter-spacing: 0;
+}
+
+.menu {
+  width: 80%;
+  flex: 1;
+  font-size: 1.2em;
+}
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.buttonContainer {
+  background-color: white;
+  padding: 10px 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.buttonContainer:hover {
+  background-color: grey;
 }

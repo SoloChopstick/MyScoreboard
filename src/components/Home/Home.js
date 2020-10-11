@@ -8,36 +8,38 @@ import NodeJsLogo from "../../images/logos/NodeJs.png"
 import html5Logo from "../../images/logos/html5.png"
 import cssLogo from "../../images/logos/css.png"
 //COMPONENT IMPORTS
-import NavButton from "../Nav/NavButton"
+import HomeNavButton from "./HomeNavButton"
 
 //DATA IMPORTS
-import {sports} from "../../data/sports"
+import {sections} from "../../data/sections"
 
 //STYLE IMPORTS
 import './Home.css';
 
 const Home = () => {
-    const buttons = sports.map(sport => (<NavButton key={sport.name} {...sport} />))
+    const buttons = sections.map(section => (<HomeNavButton key={section.name} {...section} />))
 
     return (
         <div className="home">
-            <h1>MY NBA SCOREBOARD</h1>
-            <h2>NBA scoreboard built with:</h2>
-            <div className="row">
-                <div className="col">
-                    <img src={reactLogo} alt="React"></img>
-                </div>
-                <div className="col">
-                    <img src={NodeJsLogo} alt="NodeJS"></img>
-                </div>
-                <div className="col">
-                    <img src={ES6Logo} alt="ES6"></img>
-                </div>
-                <div className="col">
-                    <img src={html5Logo} alt="HTML5"></img>
-                </div>
-                <div className="col">
-                    <img src={cssLogo} alt="CSS"></img>
+            <div className="scoreboard">
+                <h1>MY NBA SCOREBOARD</h1>
+                <h3>STACK:</h3>
+                <div className="row">
+                    <div className="col">
+                        <img src={reactLogo} alt="React"></img>
+                    </div>
+                    <div className="col">
+                        <img src={NodeJsLogo} alt="NodeJS"></img>
+                    </div>
+                    <div className="col">
+                        <img src={ES6Logo} alt="ES6"></img>
+                    </div>
+                    <div className="col">
+                        <img src={html5Logo} alt="HTML5"></img>
+                    </div>
+                    <div className="col">
+                        <img src={cssLogo} alt="CSS"></img>
+                    </div>
                 </div>
             </div>
             <div className="container">

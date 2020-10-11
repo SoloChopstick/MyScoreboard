@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  font-family: Helvetica;
-  height: 100%
+  font-family: 'Alegreya';
+  height: 100%;
+  background-color: #E8E8E8;
 }
 
 .App-logo {

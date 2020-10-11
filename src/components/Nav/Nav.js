@@ -6,17 +6,17 @@ import { Link, withRouter } from "react-router-dom";
 import NavButton from "./NavButton"
 
 //DATA IMPORTS
-import {sports} from "../../data/sports"
+import {sections} from "../../data/sections"
 
 //STYLE IMPORTS
 import "./Nav.css"
 
 const Nav = () => {
 
-    const buttons = sports.map( (sport) => <NavButton key={sport.name} {...sport}/>)
+    const buttons = sections.map( (section) => <NavButton key={section.name} {...section}/>)
     return (
         <nav>
-            <h3>LOGO</h3>
+            MY-NBA
             <ul className="nav-links">
                 {buttons}
                 <li> | </li>
