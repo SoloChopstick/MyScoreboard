@@ -23,7 +23,7 @@ class PlayerCard extends React.Component {
     };
 
     render() {
-        const {first_name, last_name, height_feet, height_inches, position} = this.props;
+        const {first_name, last_name, height_feet, height_inches, position, id} = this.props;
         const {isLoaded, stats} = this.state;
         const height = height_feet === null ? "" : ("| Height:" + height_feet + "'" + height_inches + "\"")
         let dataDisplay;
@@ -108,6 +108,7 @@ class PlayerCard extends React.Component {
                         {dataDisplay}
                     </tbody>
                 </table>
+                <input type="button" onClick={(e) => {this.props.delete(e, id)}} value="Delete Player"></input>
             </div>
         )
     }

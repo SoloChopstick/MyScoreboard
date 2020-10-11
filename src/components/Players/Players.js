@@ -32,8 +32,8 @@ class Players extends React.Component {
     }
 
     addPlayer = (e) => {
+        e.preventDefault();
         let url = "https://www.balldontlie.io/api/v1/players?search=" + this.state.playerNameSearch;
-        console.log(url);
         fetch(url)
         .then(response => response.json())
         .then(response => {
@@ -52,9 +52,21 @@ class Players extends React.Component {
         })
     }
 
+    deletePlayer = (e, id) => {
+        e.preventDefault();
+        const {players} = this.state;
+        console.log(players)
+        let tmpArray = [];
+        for (let i = 0; i < players.length; i++) {
+            players[i].id !== id && tmpArray.push(players[i])
+        }
+        this.setState({
+            players: tmpArray,
+        })
+    }
+
     render() {
         const {isLoaded, players} = this.state;
-        console.log(this.state.players)
         if (!isLoaded) {
             return (
                 <h1> LOADING . . .</h1>
@@ -62,7 +74,7 @@ class Players extends React.Component {
         }
 
         const playersDisplay = players.map(player => (
-            <PlayerCard key={player.id} {...player}/>
+            <PlayerCard key={player.id} {...player} delete={this.deletePlayer}/>
         ))
 
         return (
