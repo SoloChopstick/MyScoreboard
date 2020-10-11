@@ -26,9 +26,8 @@ class PlayerCard extends React.Component {
         const {first_name, last_name, height_feet, height_inches, position} = this.props;
         const {isLoaded, stats} = this.state;
         const height = height_feet === null ? "" : ("| Height:" + height_feet + "'" + height_inches + "\"")
-        console.log(this.state.stats[0]);
         let dataDisplay;
-        if(isLoaded) {
+        if(isLoaded & stats[0] != null) {
             const {
                 games_played,
                 min,
@@ -53,26 +52,26 @@ class PlayerCard extends React.Component {
 
             dataDisplay = 
             <tr>
-                <td>{stats[0].games_played}</td>
-                <td>{stats[0].min}</td>
-                <td>{stats[0].fgm}</td>
-                <td>{stats[0].fga}</td>
-                <td>{stats[0].fg_pct}</td>
-                <td>{stats[0].fg3m}</td>
-                <td>{stats[0].fg3a}</td>
-                <td>{stats[0].fg3_pct}</td>
-                <td>{stats[0].ftm}</td>
-                <td>{stats[0].fta}</td>
-                <td>{stats[0].ft_pct}</td>
-                <td>{stats[0].oreb}</td>
-                <td>{stats[0].dreb}</td>
-                <td>{stats[0].reb}</td>
-                <td>{stats[0].ast}</td>
-                <td>{stats[0].stl}</td>
-                <td>{stats[0].blk}</td>
-                <td>{stats[0].turnover}</td>
-                <td>{stats[0].pf}</td>
-                <td>{stats[0].pts}</td>
+                <td>{games_played}</td>
+                <td>{min}</td>
+                <td>{fgm}</td>
+                <td>{fga}</td>
+                <td>{fg_pct}</td>
+                <td>{fg3m}</td>
+                <td>{fg3a}</td>
+                <td>{fg3_pct}</td>
+                <td>{ftm}</td>
+                <td>{fta}</td>
+                <td>{ft_pct}</td>
+                <td>{oreb}</td>
+                <td>{dreb}</td>
+                <td>{reb}</td>
+                <td>{ast}</td>
+                <td>{stl}</td>
+                <td>{blk}</td>
+                <td>{turnover}</td>
+                <td>{pf}</td>
+                <td>{pts}</td>
             </tr>
         }
 
