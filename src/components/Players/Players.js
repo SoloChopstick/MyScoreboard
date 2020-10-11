@@ -1,5 +1,6 @@
 import React from "react"
 import PlayerCard from "./PlayerCard"
+import CalendarDates from "../CalendarDates/CalendarDates"
 
 import "./Players.css"
 class Players extends React.Component {
@@ -9,12 +10,13 @@ class Players extends React.Component {
         this.state = {
             isLoaded: false,
             playerNameSearch: "",
-            players: []
+            players: [],
+            season: 2019
         }
     }
 
     componentDidMount() {
-        let url = "https://www.balldontlie.io/api/v1/players?search=lebron"
+        let url = "https://www.balldontlie.io/api/v1/players?season=" + this.state.season + "&search=lebron"
         fetch(url)
         .then(response => response.json())
         .then(response => {
@@ -25,6 +27,7 @@ class Players extends React.Component {
         });
     };
     
+    /* --- PLAYER --- */
     handleChange = (e) => {
         this.setState({
             playerNameSearch: e.target.value
@@ -33,7 +36,7 @@ class Players extends React.Component {
 
     addPlayer = (e) => {
         e.preventDefault();
-        let url = "https://www.balldontlie.io/api/v1/players?search=" + this.state.playerNameSearch;
+        let url = "https://www.balldontlie.io/api/v1/players?season=" + this.state.season + "&search=" + this.state.playerNameSearch;
         fetch(url)
         .then(response => response.json())
         .then(response => {
@@ -65,8 +68,33 @@ class Players extends React.Component {
         })
     }
 
+    /* --- SEASON --- */
+    selectSeason = (e) => {
+        this.setState({
+            season: e.target.value
+        })
+    }
+
+    prevSeason = (e) => {
+        this.setState(prevState => {
+            return ({
+                season: prevState.season - 1
+            })
+        })
+    }
+
+    nextSeason = (e) => {
+        this.setState(prevState => {
+            return ({
+                season: prevState.season + 1
+            })
+        })
+    }
+
     render() {
-        const {isLoaded, players} = this.state;
+        let today = new Date();
+        let yyyy = today.getFullYear();
+        const {isLoaded, players, season} = this.state;
         if (!isLoaded) {
             return (
                 <h1> LOADING . . .</h1>
@@ -77,11 +105,26 @@ class Players extends React.Component {
             <PlayerCard key={player.id} {...player} delete={this.deletePlayer}/>
         ))
 
+        /*
+        let seasonSelect = [];
+        for (let i = 1979; i <= yyyy; i++) {
+            seasonSelect.push(<option value={i}>{i}-{i+1}</option>)
+        }
+        */
+
         return (
             <div className="players">
-                <h1> PLAYER SEASON AVERAGES 2019-2020</h1>
+                <CalendarDates currSeason={season} prevSeason={this.prevSeason} nextSeason={this.nextSeason}/>
+                {/*
+                <label for="season">Choose a season:</label>
+                <select name="season" id="season">
+                    {seasonSelect}
+                </select>
+                <input type="button" onClick={this.selectSeason} value="confirm"></input>
+                */}
                 <input type="text" placeholder="SEARCH FOR PLAYERS e.g. LEBRON" onChange={this.handleChange}></input>
                 <input type="button" onClick={this.addPlayer} value="Add Players"></input>
+                <h1>SEASON AVG</h1>
                 {playersDisplay}
             </div>
         )
