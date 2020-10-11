@@ -1,7 +1,6 @@
 import React from "react"
 import PlayerCard from "./PlayerCard"
 import CalendarDates from "../CalendarDates/CalendarDates"
-
 import "./Players.css"
 class Players extends React.Component {
     constructor() {

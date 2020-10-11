@@ -1,22 +1,24 @@
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 10vh;
-    background: #D3D3D3;
-    color: #5c677d;
   }
 
-.navStyle {
+.nav_Style {
     color: #5c677d;
     font-weight: bold;
 }
-  
-.nav-links{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
+
+.nav_ul {
+    height: 10vh;
     list-style: None;
-    margin: 0 0 0 50vw;
-    text-align: center;
-  }
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #D3D3D3;
+}
+
+.nav_li {
+    margin: 25px;
+}
+
+.first_item {
+    margin-right: auto;
+}

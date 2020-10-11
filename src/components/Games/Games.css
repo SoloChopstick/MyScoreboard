@@ -1,3 +1,7 @@
+.games {
+    min-height: 80vh;
+}
+
 .container {
     margin:1em;
     height:205px;
@@ -5,6 +9,7 @@
     align-items:center;
     font-size:1.1em;
   }
+
 .text {
     letter-spacing:0;
     text-align:center;

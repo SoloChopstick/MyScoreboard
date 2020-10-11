@@ -4,11 +4,11 @@ import "./Nav.css"
 
 const NavButton = (props) => {
     return (
-        <div>
-            <Link className="navStyle" to={props.name.toLowerCase()}>
-                <li>{props.name}</li>
+        <li className="nav_li">
+            <Link className="nav_Style" to={props.name.toLowerCase()}>
+                {props.name}
             </Link>
-        </div>
+        </li>
     )
 }
 

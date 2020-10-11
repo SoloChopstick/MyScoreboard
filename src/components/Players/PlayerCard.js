@@ -1,4 +1,5 @@
 import React from "react"
+import { makeRandomColor } from "../../util/randomColor.js"
 
 class PlayerCard extends React.Component {
     constructor(props) {
@@ -75,10 +76,16 @@ class PlayerCard extends React.Component {
             </tr>
         }
 
+        let playerColor = makeRandomColor();
+        const style = {
+            color: playerColor,
+        }
         return (
             <div>
-                <h3>{first_name + " " + last_name}</h3>
-                Position: {position} | Team: {this.props.team.abbreviation} {this.props.team.full_name} {height}
+                <div style={style}>
+                    <h3>{first_name + " " + last_name}</h3>
+                    Position: {position} | Team: {this.props.team.abbreviation} {this.props.team.full_name} {height}
+                </div>
                 <table>
                     <thead>
                         <tr>

@@ -34,6 +34,7 @@ class Games extends React.Component {
         let gamesDisplay;
         console.log(games.length);
         console.log(games);
+        //No Games
         if (games.length === 0) {
             gamesDisplay = <NoGames/>
         }
@@ -47,7 +48,7 @@ class Games extends React.Component {
             )
         }
         return (
-            <div>
+            <div className="games">
                 <h1> HELLO FROM GAMES </h1>
                 {gamesDisplay}
             </div>

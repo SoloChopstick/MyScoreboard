@@ -1,5 +1,6 @@
 .home {
   height: 75vh;
+  min-height: 10vh;
 }
 
 .home-links {
@@ -66,6 +67,7 @@ img {
   padding: 10px 50px;
   border: 1px solid black;
   border-radius: 10px;
+  margin: 10px;
 }
 
 .buttonContainer:hover {
