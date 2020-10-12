@@ -101,11 +101,15 @@ class Players extends React.Component {
         let today = new Date();
         let yyyy = today.getFullYear();
         const {isLoaded, players, season} = this.state;
+        /*
         if (!isLoaded) {
             return (
-                <h1> LOADING . . .</h1>
+                <div className="players">
+                    <h1> LOADING . . .</h1>
+                </div>
             )
         }
+        */
 
         const playersDisplay = players.map(player => (
             <PlayerCard key={player.id} {...player} delete={this.deletePlayer}/>

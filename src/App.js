@@ -27,7 +27,7 @@ function App() {
           <Route path="/teams"  component={Teams}/>
           <Route path="/games" exact component={Games}/>
           <Route path="/players" exact component={Players}/>
-          <Route path="/games/:day" component={Games}/>
+          <Route path="/games/:date" component={Games}/>
           <Route path="/players/:season" component={PlayersSeason}/>
         </Switch>
       <header>

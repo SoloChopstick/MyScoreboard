@@ -22,3 +22,15 @@
     background: white;
     padding: 10px;
   }
+
+.currentDate {
+  font-size: 200%;
+}
+
+.otherDates {
+  font-size: 175%;
+}
+
+.otherDatesBefore {
+  font-size: 150%;
+}

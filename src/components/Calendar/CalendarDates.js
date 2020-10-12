@@ -7,28 +7,16 @@ import "./CalendarDates.css"
 
 const CalendarDates = (props) => {
     let { today } = props;
-    let yesterday = new Date();
-    let tomorrow = new Date();
-    yesterday.setDate(today.getDate() - 1);
-    tomorrow.setDate(today.getDate() - 1);
-    console.log(yesterday)
-    console.log(today)
-    console.log(tomorrow)
+    let yesterdayYesterday = new Date(today.getTime() - (86400000 * 2));
+    let yesterday = new Date(today.getTime() - 86400000);
+    let tomorrow = new Date(today.getTime() + 86400000);
+    let tomorrowTomorrow = new Date(today.getTime() + (86400000 * 2));
 
-    let ydadd = String(yesterday.getDate()).padStart(2, '0');
-    let ydamm = String(yesterday.getMonth() + 1).padStart(2, '0');
-    let ydayyyy = yesterday.getFullYear();
-    let yesterdayLink = ydayyyy + ydamm + ydadd;
-
-    let dd = String(today.getDate()).padStart(2, '0');
-    let mm = String(today.getMonth() + 1).padStart(2, '0');
-    let yyyy = today.getFullYear();
-    let todayLink = yyyy + mm + dd;
-
-    let tmwdd = String(yesterday.getDate()).padStart(2, '0');
-    let tmwmm = String(yesterday.getMonth() + 1).padStart(2, '0');
-    let tmwyyyy = yesterday.getFullYear();
-    let tomorrowLink = tmwyyyy + tmwmm + tmwdd;
+    let yesterdayYesterdayLink = yesterdayYesterday.toDateString();
+    let yesterdayLink = yesterday.toDateString();
+    let todayLink = today.toDateString();
+    let tomorrowLink = tomorrow.toDateString();
+    let tomorrowTomorrowLink = tomorrowTomorrow.toDateString();
 
     return (
         <div className="calendarDates">
@@ -38,11 +26,21 @@ const CalendarDates = (props) => {
                         <FaArrowCircleLeft />
                     </button>
                 </Link>
-                <h3>{yesterdayLink}</h3>
-                <h3> | </h3>
-                <h3>{todayLink} </h3>
-                <h3> | </h3>
-                <h3>{tomorrowLink}</h3>
+                <div className="otherDatesBefore">
+                    {yesterdayYesterdayLink}
+                </div>
+                <div className="otherDates">
+                    {yesterdayLink}
+                </div>
+                <div className="currentDate">
+                    {todayLink}
+                </div>
+                <div className="otherDates">
+                    {tomorrowLink}
+                </div>
+                <div className="otherDatesBefore">
+                    {tomorrowTomorrowLink}
+                </div>
                 <Link to={`/games/${tomorrow}`}>
                     <button type="button" value="forward">
                         <FaArrowCircleRight />
