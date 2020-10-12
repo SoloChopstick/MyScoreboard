@@ -1,26 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # MY SCOREBOARD
-Available at [My-NBA](https://solochopstick.github.io/MyScoreboard).
+Available at [MyScoreboard](https://solochopstick.github.io/MyScoreboard).
 ![myNBA](/src/images/Homepage.PNG?raw=true)
 
 ## Copy Locally and Start
 
-npm install
+npm install<br />
 npm start
 
 ## Dependencies
 Required installs if npm install fails:
 
-# fortawesome
-npm i --save @fortawesome/fontawesome-svg-core
-npm install --save @fortawesome/free-solid-svg-icons
-npm install --save @fortawesome/react-fontawesome
-npm install --save @fortawesome/free-brands-svg-icons
+## fortawesome
+npm i --save @fortawesome/fontawesome-svg-core<br />
+npm install --save @fortawesome/free-solid-svg-icons<br />
+npm install --save @fortawesome/react-fontawesome<br />
+npm install --save @fortawesome/free-brands-svg-icons<br />
 npm install --save @fortawesome/free-regular-svg-icons
 
-# lodash
-npm i -g npm
+## lodash
+npm i -g npm<br />
 npm i --save lodash
 
 ## Available Scripts
