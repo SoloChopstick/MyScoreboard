@@ -80,3 +80,8 @@ img {
   color: #5c677d;
   font-weight: bold;
 }
+
+.logos {
+  margin: 50px auto;
+  width: 50%;
+}

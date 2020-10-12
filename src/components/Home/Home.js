@@ -23,22 +23,23 @@ const Home = () => {
         <div className="home">
             <div className="scoreboard">
                 <h1>MY NBA SCOREBOARD</h1>
-                <h3>STACK:</h3>
-                <div className="row">
-                    <div className="col">
-                        <img src={reactLogo} alt="React"></img>
-                    </div>
-                    <div className="col">
-                        <img src={NodeJsLogo} alt="NodeJS"></img>
-                    </div>
-                    <div className="col">
-                        <img src={ES6Logo} alt="ES6"></img>
-                    </div>
-                    <div className="col">
-                        <img src={html5Logo} alt="HTML5"></img>
-                    </div>
-                    <div className="col">
-                        <img src={cssLogo} alt="CSS"></img>
+                <div className="logos">
+                    <div className="row">
+                        <div className="col">
+                            <img src={reactLogo} alt="React"></img>
+                        </div>
+                        <div className="col">
+                            <img src={NodeJsLogo} alt="NodeJS"></img>
+                        </div>
+                        <div className="col">
+                            <img src={ES6Logo} alt="ES6"></img>
+                        </div>
+                        <div className="col">
+                            <img src={html5Logo} alt="HTML5"></img>
+                        </div>
+                        <div className="col">
+                            <img src={cssLogo} alt="CSS"></img>
+                        </div>
                     </div>
                 </div>
             </div>

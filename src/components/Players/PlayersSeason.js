@@ -3,7 +3,7 @@ import React from "react"
 
 /* --- COMPONENT IMPORTS --- */
 import PlayerCard from "./PlayerCard"
-import CalendarDates from "../CalendarDates/CalendarDates"
+import CalendarYears from "../Calendar/CalendarYears"
 
 /* --- STYLE IMPORTS --- */
 import "./Players.css"
@@ -75,31 +75,6 @@ class Players extends React.Component {
         })
     }
 
-    /* --- SEASON --- */
-    /*
-    selectSeason = (e) => {
-        this.setState({
-            season: e.target.value
-        })
-    }
-
-    prevSeason = (e) => {
-        this.setState(prevState => {
-            return ({
-                season: prevState.season - 1
-            })
-        })
-    }
-
-    nextSeason = (e) => {
-        this.setState(prevState => {
-            return ({
-                season: prevState.season + 1
-            })
-        })
-    }
-    */
-
     render() {
         const {isLoaded, players} = this.state;
         const {season} = this.props.match.params;
@@ -115,7 +90,7 @@ class Players extends React.Component {
 
         return (
             <div className="players">
-                <CalendarDates currSeason={season} />
+                <CalendarYears currSeason={season} />
                 <input type="text" placeholder="SEARCH FOR PLAYERS e.g. LEBRON" onChange={this.handleChange}></input>
                 <input type="button" onClick={this.addPlayer} value="Add Players"></input>
                 <h1>SEASON AVG</h1>

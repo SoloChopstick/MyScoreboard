@@ -1,6 +1,7 @@
 import React from "react"
 import GameCard from "./GameCard"
 import NoGames from "./NoGames"
+import CalendarDates from "../Calendar/CalendarDates"
 class Games extends React.Component {
     constructor() {
         super()
@@ -10,7 +11,7 @@ class Games extends React.Component {
             games: []
         }
     }
-
+    
     componentDidMount() {
         let today = new Date();
         let dd = String(today.getDate()).padStart(2, '0');
@@ -30,6 +31,14 @@ class Games extends React.Component {
     }
 
     render() {
+        let today = new Date();
+        /*
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+        today = yyyy + mm + dd;
+        */
+
         const {isLoaded, games} = this.state;
         let gamesDisplay;
         console.log(games.length);
@@ -49,6 +58,7 @@ class Games extends React.Component {
         }
         return (
             <div className="games">
+                <CalendarDates today={today} />
                 <h1> HELLO FROM GAMES </h1>
                 {gamesDisplay}
             </div>

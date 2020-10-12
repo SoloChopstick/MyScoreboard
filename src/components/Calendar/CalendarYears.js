@@ -6,7 +6,7 @@ import "./CalendarDates.css"
 import { Link } from "react-router-dom"
 
 
-const CalendarDates = (props) => {
+const CalendarYears = (props) => {
     let {currSeason} = props;
     currSeason = parseInt(currSeason);
     return (
@@ -32,4 +32,4 @@ const CalendarDates = (props) => {
     )
 }
 
-export default CalendarDates
+export default CalendarYears

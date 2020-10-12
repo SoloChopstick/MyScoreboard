@@ -3,7 +3,7 @@ import React from "react"
 
 /* --- COMPONENT IMPORTS --- */
 import PlayerCard from "./PlayerCard"
-import CalendarDates from "../CalendarDates/CalendarDates"
+import CalendarYears from "../Calendar/CalendarYears"
 
 /* --- STYLE IMPORTS --- */
 import "./Players.css"
@@ -120,7 +120,7 @@ class Players extends React.Component {
 
         return (
             <div className="players">
-                <CalendarDates currSeason={season} prevSeason={this.prevSeason} nextSeason={this.nextSeason}/>
+                <CalendarYears currSeason={season} prevSeason={this.prevSeason} nextSeason={this.nextSeason}/>
                 {/*
                 <label for="season">Choose a season:</label>
                 <select name="season" id="season">
