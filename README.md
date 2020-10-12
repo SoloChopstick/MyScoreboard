@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # MY SCOREBOARD
-Available at [My-NBA] (https://solochopstick.github.io/MyScoreboard)
-![myNBA](/images/Homepage.PNG?raw=true)
+Available at [My-NBA](https://solochopstick.github.io/MyScoreboard).
+![myNBA](/src/images/Homepage.PNG?raw=true)
 
 ## Copy Locally and Start
 
