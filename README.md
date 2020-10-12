@@ -12,14 +12,14 @@ npm start
 ## Dependencies
 Required installs if npm install fails:
 
-## fortawesome
+### fortawesome
 npm i --save @fortawesome/fontawesome-svg-core<br />
 npm install --save @fortawesome/free-solid-svg-icons<br />
 npm install --save @fortawesome/react-fontawesome<br />
 npm install --save @fortawesome/free-brands-svg-icons<br />
 npm install --save @fortawesome/free-regular-svg-icons
 
-## lodash
+### lodash
 npm i -g npm<br />
 npm i --save lodash
 
