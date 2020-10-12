@@ -13,10 +13,12 @@
 }
   
 .cal-links{
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     list-style: None;
     margin: auto;
     text-align: right;
+    background: white;
+    padding: 10px;
   }

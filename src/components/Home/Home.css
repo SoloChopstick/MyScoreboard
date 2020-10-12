@@ -15,6 +15,11 @@
     align-content: center;
   }
 
+.nav_Style {
+    color: #5c677d;
+    font-weight: bold;
+}
+
 img {
     width:  100px;
     height: 100px;
@@ -71,5 +76,7 @@ img {
 }
 
 .buttonContainer:hover {
-  background-color: grey;
+  background-color: rgb(207, 207, 207);
+  color: #5c677d;
+  font-weight: bold;
 }

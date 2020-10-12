@@ -13,3 +13,32 @@ td, th {
     padding: 0.5rem;
     text-align: center;
   }
+
+.flex_container {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.playerInfo {
+    text-align: left;
+    flex: 25px 250px 0;
+}
+
+.playerTable {
+    flex: 25px 250px 0;
+}
+
+.playerButton {
+    flex: 25px 250px 0;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.tables_container {
+    float: center;
+    width: 100%;
+}

@@ -9,6 +9,7 @@ import Nav from "./components/Nav/Nav"
 import About from "./About"
 import Games from "./components/Games/Games"
 import Players from "./components/Players/Players"
+import PlayersSeason from"./components/Players/PlayersSeason"
 import Teams from "./components/Teams/Teams"
 import Footer from "./components/Footer/Footer"
 
@@ -22,10 +23,12 @@ function App() {
       <Nav />
         <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path="/about" exact component={Home}/>
+          <Route path="/about"  component={Home}/>
+          <Route path="/teams"  component={Teams}/>
           <Route path="/games" exact component={Games}/>
           <Route path="/players" exact component={Players}/>
-          <Route path="/teams" exact component={Teams}/>
+          <Route path="/games/:day" component={Games}/>
+          <Route path="/players/:season" component={PlayersSeason}/>
         </Switch>
       <header>
         <link

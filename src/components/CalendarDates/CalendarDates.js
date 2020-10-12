@@ -3,21 +3,30 @@ import { FaArrowCircleLeft } from 'react-icons/fa'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import "./CalendarDates.css"
 
+import { Link } from "react-router-dom"
+
 
 const CalendarDates = (props) => {
-    const {currSeason} = props;
+    let {currSeason} = props;
+    currSeason = parseInt(currSeason);
     return (
         <div className="calendarDates">
             <nav className="cal-links">
-                <button type="button" value="back" onClick={props.prevSeason}>
-                    <FaArrowCircleLeft />
-                </button>
+                <Link to={`/players/${currSeason - 1}`}>
+                    <button type="button" value="back" >
+                        <FaArrowCircleLeft />
+                    </button>
+                </Link>
                 <h3>{currSeason - 1} - {currSeason}</h3>
+                <h3> | </h3>
                 <h3>{currSeason} - {currSeason + 1} </h3>
+                <h3> | </h3>
                 <h3>{currSeason + 1} - {currSeason + 2}</h3>
-                <button type="button" value="forward" onClick={props.nextSeason}>
-                    <FaArrowCircleRight />
-                </button>
+                <Link to={`/players/${currSeason + 1}`}>
+                    <button type="button" value="forward">
+                        <FaArrowCircleRight />
+                    </button>
+                </Link>
             </nav>
         </div>
     )

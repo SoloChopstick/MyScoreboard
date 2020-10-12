@@ -10,19 +10,19 @@ import "./Players.css"
 
 
 class Players extends React.Component {
-    constructor() {
-        super()
-
+    constructor(props) {
+        super(props)
         this.state = {
             isLoaded: false,
             playerNameSearch: "",
             players: [],
-            season: 2019
         }
     }
 
     componentDidMount() {
-        let url = "https://www.balldontlie.io/api/v1/players?season=" + this.state.season + "&search=lebron"
+        let { match } = this.props;
+        console.log(match.params.season)
+        let url = `https://www.balldontlie.io/api/v1/players?season=${match.params.season}&search=lebron`
         fetch(url)
         .then(response => response.json())
         .then(response => {
@@ -42,7 +42,8 @@ class Players extends React.Component {
 
     addPlayer = (e) => {
         e.preventDefault();
-        let url = "https://www.balldontlie.io/api/v1/players?season=" + this.state.season + "&search=" + this.state.playerNameSearch;
+        let { match } = this.props;
+        let url = `https://www.balldontlie.io/api/v1/players?season=${match.params.season}&search=${this.state.playerNameSearch}`
         fetch(url)
         .then(response => response.json())
         .then(response => {
@@ -75,6 +76,7 @@ class Players extends React.Component {
     }
 
     /* --- SEASON --- */
+    /*
     selectSeason = (e) => {
         this.setState({
             season: e.target.value
@@ -96,11 +98,11 @@ class Players extends React.Component {
             })
         })
     }
+    */
 
     render() {
-        let today = new Date();
-        let yyyy = today.getFullYear();
-        const {isLoaded, players, season} = this.state;
+        const {isLoaded, players} = this.state;
+        const {season} = this.props.match.params;
         if (!isLoaded) {
             return (
                 <h1> LOADING . . .</h1>
@@ -111,23 +113,9 @@ class Players extends React.Component {
             <PlayerCard key={player.id} {...player} delete={this.deletePlayer}/>
         ))
 
-        /*
-        let seasonSelect = [];
-        for (let i = 1979; i <= yyyy; i++) {
-            seasonSelect.push(<option value={i}>{i}-{i+1}</option>)
-        }
-        */
-
         return (
             <div className="players">
-                <CalendarDates currSeason={season} prevSeason={this.prevSeason} nextSeason={this.nextSeason}/>
-                {/*
-                <label for="season">Choose a season:</label>
-                <select name="season" id="season">
-                    {seasonSelect}
-                </select>
-                <input type="button" onClick={this.selectSeason} value="confirm"></input>
-                */}
+                <CalendarDates currSeason={season} />
                 <input type="text" placeholder="SEARCH FOR PLAYERS e.g. LEBRON" onChange={this.handleChange}></input>
                 <input type="button" onClick={this.addPlayer} value="Add Players"></input>
                 <h1>SEASON AVG</h1>

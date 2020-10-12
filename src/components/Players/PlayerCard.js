@@ -1,6 +1,6 @@
 import React from "react"
 import { makeRandomColor } from "../../util/randomColor.js"
-
+import "./Players.css"
 class PlayerCard extends React.Component {
     constructor(props) {
         super(props)
@@ -26,7 +26,7 @@ class PlayerCard extends React.Component {
     render() {
         const {first_name, last_name, height_feet, height_inches, position, id} = this.props;
         const {isLoaded, stats} = this.state;
-        const height = height_feet === null ? "" : ("| Height:" + height_feet + "'" + height_inches + "\"")
+        const height = height_feet === null ? "" : ("| Height: " + height_feet + "'" + height_inches + "\"")
         let dataDisplay;
         if(isLoaded & stats[0] != null) {
             const {
@@ -81,12 +81,14 @@ class PlayerCard extends React.Component {
             color: playerColor,
         }
         return (
-            <div>
-                <div style={style}>
+            <div className="flex_container">
+                <div className="playerInfo">
                     <h3>{first_name + " " + last_name}</h3>
-                    Position: {position} | Team: {this.props.team.abbreviation} {this.props.team.full_name} {height}
+                    Team: {this.props.team.abbreviation} | {this.props.team.full_name}
+                    <br/>
+                    Position: {position} {height}
                 </div>
-                <table>
+                <table className="playerTable">
                     <thead>
                         <tr>
                             <th>GP</th>
@@ -115,7 +117,7 @@ class PlayerCard extends React.Component {
                         {dataDisplay}
                     </tbody>
                 </table>
-                <input type="button" onClick={(e) => {this.props.delete(e, id)}} value="Delete Player"></input>
+                <input className="playerButton" type="button" onClick={(e) => {this.props.delete(e, id)}} value="X"></input>
             </div>
         )
     }

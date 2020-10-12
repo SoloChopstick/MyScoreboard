@@ -4,7 +4,7 @@ import "./Home.css"
 
 const HomeNavButton = (props) => {
     return (
-        <Link className="navStyle" to={props.name.toLowerCase()}>
+        <Link className="nav_Style" to={props.name.toLowerCase()}>
             <div className="buttonContainer">
                 <li>{props.name}</li>
             </div>
