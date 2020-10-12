@@ -1,6 +1,7 @@
 .home {
   height: 75vh;
   min-height: 10vh;
+  color: #17408B;
 }
 
 .home-links {
@@ -68,11 +69,10 @@ img {
 }
 
 .buttonContainer {
-  background-color: white;
+  background-color: grey;
   padding: 10px 50px;
   border: 1px solid black;
   border-radius: 10px;
-  margin: 10px;
 }
 
 .buttonContainer:hover {
@@ -84,4 +84,9 @@ img {
 .logos {
   margin: 50px auto;
   width: 50%;
+}
+
+p {
+  font-weight: bold;
+  color: #17408B;
 }

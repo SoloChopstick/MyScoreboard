@@ -6,32 +6,35 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid black;
+    width: 100%;
   }
-  
 td, th {
-    border: 1px solid #999;
-    padding: 0.5rem;
+    padding: .5rem;
     text-align: center;
+    border: 1px solid;
   }
 
 .flex_container {
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    width: 70%;
     flex-wrap: wrap;
     margin: auto;
+    padding: 0.5rem 0rem;
 }
 
 .playerInfo {
     text-align: left;
-    flex: 25px 250px 0;
-}
-
-.playerTable {
-    flex: 25px 250px 0;
 }
 
 .playerButton {
-    flex: 25px 250px 0;
+    margin-left: auto;
+    background-color: #C9082A;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.3em;
 }
 
 table {
@@ -41,4 +44,14 @@ table {
 .tables_container {
     float: center;
     width: 100%;
+}
+
+.playerName {
+    font-size: 200%;
+}
+
+.flex_horizontal {
+    display:flex;
+    align-content: center;
+    align-items: center;
 }

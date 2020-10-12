@@ -13,18 +13,18 @@ import "./Nav.css"
 
 const Nav = () => {
 
-    const buttons = sections.map( (section) => <NavButton key={section.name} {...section}/>)
+    const buttons = sections.map(section => <NavButton key={section.name} {...section}/>)
     return (
         <nav>
             <ul className="nav_ul">
                 <li className="first_item">                
                     <Link className="nav_Style" to="/">
-                    MY-NBA</Link>
+                    HOME</Link>
                 </li>
                 {buttons}
 
-                <li className="nav_li"> | </li>
-                
+                <div className="nav_Style"> | </div>
+
                 <li className="nav_li">                
                     <Link className="nav_Style" to="/about">
                     About</Link>
@@ -37,6 +37,15 @@ const Nav = () => {
                     </a>
                 </li>
             </ul>
+            {/*
+            <ul>
+                <li class="one"><a href="#">Uno</a></li>
+                <li class="two"><a href="#">Dos</a></li>
+                <li class="three"><a href="#">Tres</a></li>
+                <li class="four"><a href="#">Quatro</a></li>
+                <hr/>
+            </ul>
+            */}
         </nav>
     )
 }

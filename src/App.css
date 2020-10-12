@@ -3,6 +3,18 @@
   font-family: 'Alegreya';
   height: 100%;
   background-color: #E8E8E8;
+  background-image:
+    linear-gradient(
+      45deg, 
+      #EEEEEE 20%,
+      #CCCCCC 20%,
+      #CCCCCC 40%,
+      #999999 40%,
+      #999999 60%,
+      #666666 60%,
+      #666666 80%,
+      #333333 80%
+    );
 }
 
 .App-logo {

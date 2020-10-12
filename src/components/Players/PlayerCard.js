@@ -83,7 +83,14 @@ class PlayerCard extends React.Component {
         return (
             <div className="flex_container">
                 <div className="playerInfo">
-                    <h3>{first_name + " " + last_name}</h3>
+                    <div className="flex_horizontal">
+                        <div className="playerName">
+                            {first_name + " " + last_name}
+                        </div>
+                        <div className="playerButton">
+                            <input className="playerButton" type="button" onClick={(e) => {this.props.delete(e, id)}} value="X"></input>
+                        </div>
+                    </div>
                     Team: {this.props.team.abbreviation} | {this.props.team.full_name}
                     <br/>
                     Position: {position} {height}
@@ -117,7 +124,6 @@ class PlayerCard extends React.Component {
                         {dataDisplay}
                     </tbody>
                 </table>
-                <input className="playerButton" type="button" onClick={(e) => {this.props.delete(e, id)}} value="X"></input>
             </div>
         )
     }

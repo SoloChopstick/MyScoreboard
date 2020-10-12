@@ -23,8 +23,8 @@ function App() {
       <Nav />
         <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path="/about"  component={Home}/>
-          <Route path="/teams"  component={Teams}/>
+          <Route path="/about" exact component={Home}/>
+          <Route path="/teams" exact component={Teams}/>
           <Route path="/games" exact component={Games}/>
           <Route path="/players" exact component={Players}/>
           <Route path="/games/:date" component={Games}/>
